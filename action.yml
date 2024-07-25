@@ -1,0 +1,27 @@
+name: 'kagami'
+description: 'A Github Action to migrate git repositories to another git systems.'
+inputs:
+  MIRROR_GIT_USERNAME:
+    description: 'Username for the mirror Git repository.'
+    required: true
+  MIRROR_GIT_EMAIL:
+    description: 'Email associated with the mirror Git repository.'
+    required: true
+  MIRROR_GIT_TOKEN:
+    description: 'Personal access token for the mirror Git repository.'
+    required: true
+  MIRROR_GIT_HOSTNAME:
+    description: 'Hostname of the mirror Git repository.'
+    required: true
+  MIRROR_GIT_PROJECT:
+    description: 'The name of the mirror Git project.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.MIRROR_GIT_USERNAME }}
+    - ${{ inputs.MIRROR_GIT_EMAIL }}
+    - ${{ inputs.MIRROR_GIT_TOKEN }}
+    - ${{ inputs.MIRROR_GIT_HOSTNAME }}
+    - ${{ inputs.MIRROR_GIT_PROJECT }}
