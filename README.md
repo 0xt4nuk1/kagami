@@ -1,4 +1,4 @@
-# GitHub Action: Mirror Git Repository
+# Kagami: Mirror Git Repository
 
 This GitHub Action is designed to push the contents of a repository to a mirror repository. It ensures that your primary repository is mirrored to a secondary location, providing redundancy and backup.
 
