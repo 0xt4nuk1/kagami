@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Kagami
-        uses: javierparadadev/kagami@v1.0.0
+        uses: javierparadadev/kagami@v1
         env:
           MIRROR_GIT_USERNAME: your-mirror-git-username
           MIRROR_GIT_EMAIL: your-mirror-git-email@mail.com
