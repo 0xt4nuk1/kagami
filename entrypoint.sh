@@ -26,13 +26,13 @@ username=${MIRROR_GIT_USERNAME}
 password=${MIRROR_GIT_TOKEN}" | git credential approve
 
 # Checkout the current branch
-git checkout "$GITHUB_REF_NAME"
+git checkout "$GITHUB_REF_NAME" --quiet
 
 # Add Mirror Git remote
 git remote add mirror_git "https://${MIRROR_GIT_HOSTNAME}/${MIRROR_GIT_USERNAME}/${MIRROR_GIT_PROJECT}.git"
 
 # Push everything to Mirror Git remote
-git push --force mirror_git
+git push --force mirror_git --quiet
 
 # Cleanup credentials from cache
 echo "url=https://${MIRROR_GIT_HOSTNAME}" | git credential reject
