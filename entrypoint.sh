@@ -23,7 +23,7 @@ git config --global credential.helper cache
 echo "protocol=https
 host=${MIRROR_GIT_HOSTNAME}
 username=${MIRROR_GIT_USERNAME}
-password=${MIRROR_GIT_TOKEN}" | git credential approve
+password=${MIRROR_GIT_TOKEN}" | git credential approve > /dev/null 2>&1
 
 # Checkout the current branch
 git checkout "$GITHUB_REF_NAME" --quiet
@@ -35,4 +35,4 @@ git remote add mirror_git "https://${MIRROR_GIT_HOSTNAME}/${MIRROR_GIT_USERNAME}
 git push --force mirror_git --quiet
 
 # Cleanup credentials from cache
-echo "url=https://${MIRROR_GIT_HOSTNAME}" | git credential reject
+echo "url=https://${MIRROR_GIT_HOSTNAME}" | git credential reject > /dev/null 2>&1
