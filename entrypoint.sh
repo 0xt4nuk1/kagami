@@ -20,7 +20,10 @@ git config --global user.email "${MIRROR_GIT_EMAIL}"
 git config --global credential.helper cache
 
 # Manually insert credentials into cache
-echo "https://${MIRROR_GIT_USERNAME}:${MIRROR_GIT_TOKEN}@${MIRROR_GIT_HOSTNAME}" | git credential approve
+echo "protocol=https
+host=${MIRROR_GIT_HOSTNAME}
+username=${MIRROR_GIT_USERNAME}
+password=${MIRROR_GIT_TOKEN}" | git credential approve
 
 # Checkout the current branch
 git checkout "$GITHUB_REF_NAME"
