@@ -9,7 +9,24 @@ To use this GitHub Action in your workflow, include it as a step in your GitHub 
 ### Example Workflow
 
 ```yaml
+name: Git Mirror
 
+on: [push]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    name: Reflect
+    steps:
+      - uses: actions/checkout@v1
+      - name: Kagami
+        uses: javierparadadev/kagami@v1.0.3
+        env:
+          MIRROR_GIT_USERNAME: your-mirror-git-username
+          MIRROR_GIT_EMAIL: your-mirror-git-email@mail.com
+          MIRROR_GIT_HOSTNAME: git-system-url.com  # For example: "gitlab.com"
+          MIRROR_GIT_PROJECT: your-repository-project-name
+          MIRROR_GIT_TOKEN: ${{ secrets.MIRROR_GIT_TOKEN }}
 ```
 
 ### Required Environment Variables
