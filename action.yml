@@ -1,5 +1,5 @@
 name: 'Kagami Git Mirror'
-description: 'A GitHub Action to mirror git repositories to another git systems, like GitLab or Bitbucket.'
+description: 'A GitHub Action to mirror git repositories to another git systems like GitLab or Bitbucket.'
 icon: archive
 branding:
   icon: "copy"
