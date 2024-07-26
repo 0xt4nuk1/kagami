@@ -1,4 +1,4 @@
-name: 'Kagami'
+name: 'Kagami Git Mirror'
 description: 'A Github Action to mirror git repositories to another git systems.'
 inputs:
   MIRROR_GIT_USERNAME:
