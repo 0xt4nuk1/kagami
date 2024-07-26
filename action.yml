@@ -1,5 +1,6 @@
 name: 'Kagami Git Mirror'
 description: 'A Github Action to mirror git repositories to another git systems.'
+icon: archive
 inputs:
   MIRROR_GIT_USERNAME:
     description: 'Username for the mirror Git repository.'
