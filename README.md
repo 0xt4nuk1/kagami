@@ -26,7 +26,7 @@ jobs:
           MIRROR_GIT_EMAIL: your-mirror-git-email@mail.com
           MIRROR_GIT_HOSTNAME: git-system-url.com  # For example: "gitlab.com"
           MIRROR_GIT_PROJECT: your-repository-project-name
-          MIRROR_GIT_TOKEN: ${{ secrets.MIRROR_GIT_TOKEN }}
+          MIRROR_GIT_TOKEN: ${{ secrets.MIRROR_GIT_TOKEN }} # Your access token with write permissions
 ```
 
 ### Required Environment Variables
