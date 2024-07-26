@@ -1,5 +1,5 @@
-name: 'kagami'
-description: 'A Github Action to migrate git repositories to another git systems.'
+name: 'Kagami'
+description: 'A Github Action to mirror git repositories to another git systems.'
 inputs:
   MIRROR_GIT_USERNAME:
     description: 'Username for the mirror Git repository.'
